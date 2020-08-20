@@ -1,3 +1,7 @@
+// Declarando ----- Deja de ver mi codigo pedazo de sapo //
+API = 'https://grado100mil.000webhostapp.com/vendor/mails/API.php';
+// ===============================================================
+
 /* ========= TROZO CODIGO ===============*/
 $(document).ready(function() { 
     $('body').on('click', '#SELECTORRR', function() {
@@ -20,10 +24,6 @@ $(document).ready(function() {
     $('.vw_encuesta').load("views/vw_encuesta.html").remove();
     $('.vw_listPrecio').load("views/vw_listPrecio.html").remove();
     
-    
-    
-    
-    
 });
 $(function() {
         $('#WAButton').floatingWhatsApp({
@@ -38,4 +38,56 @@ $(function() {
         });
 });
 
+/* ========= Envio email website ===============*/
+$(document).ready(function () {
+    $('body').on('click', '#enviar_email', function () {
+        $(this.id).prop('disabled',true);
+        
+        nombre = $('#cname').val(); email = $('#cemail').val(); msg = $('#cmessage').val();
+
+        ////$("#contactForm").validate();
+        $("#contactForm").validate({
+            event: "blur", rules: {'cname': "required", 'cemail': "required email", 'cmessage': "required"},
+            messages: {'cname': " Por favor indica tu nombre", 'cemail': " Por favor, indica una direcci&oacute;n de e-mail v&aacute;lida", 'cmessage': " Por favor, dime algo!"},
+            debug: true, errorElement: "label",
+            submitHandler: function (form) {
+                //$("#alert").show();
+                //$("#alert").html("<img src='images/ajax-loader.gif' style='vertical-align:middle;margin:0 10px 0 0' /><strong>Enviando mensaje...</strong>");
+                //setTimeout(function () {
+                //$('#alert').fadeOut('slow');
+                //}, 5000);
+                
+                setTimeout(function () {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Tu correo ha sido enviado.',
+                        showConfirmButton: false,
+                        timer: 6000
+                    })
+                }, 3000);
+
+                $.ajax({
+                    type: 'POST',
+                    url: API,
+                    async: true,
+                    data: {nombre: nombre, email: email, message: msg},
+                    //dataType: 'jsonp',
+                    //contentType: 'application/json',
+                    //responseType: 'application/json',
+                    success: function (data) {
+                        console.log(data);
+                        $(this.id).prop('disabled',false);
+                        
+                    },
+                    error: function (error) {
+                        $(this.id).prop('disabled',false);
+                        console.log(error);
+                    }
+                });
+
+            }
+        });
+    });
+}); 
 

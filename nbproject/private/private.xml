@@ -4,9 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/AppServ/www/bestscomputer/index.html</file>
-            <file>file:/C:/AppServ/www/bestscomputer/assets/js/scripts.js</file>
-            <file>file:/C:/AppServ/www/bestscomputer/assets/css/swiper.css</file>
-            <file>file:/C:/AppServ/www/bestscomputer/assets/css/styles.css</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_video.html</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_header.html</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_encuesta.html</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_pre_footer.html</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_about_team.html</file>
+            <file>file:/C:/AppServ/www/bestscomputer/assets/js/myJS.js</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_contacto.html</file>
+            <file>file:/C:/AppServ/www/bestscomputer/views/vw_footer.html</file>
         </group>
     </open-files>
 </project-private>
