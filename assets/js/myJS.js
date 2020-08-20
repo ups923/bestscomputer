@@ -13,11 +13,13 @@ $(document).ready(function() {
     $('.vw_pre_footer').load("views/vw_pre_footer.html");
     $('.vw_footer').load("views/vw_footer.html");
     $('.vw_contacto').load("views/vw_contacto.html");
+    $('.vw_servicios').load("views/vw_servicios.html");
     $('.vw_about').load("views/vw_about_team.html").remove();
     $('.vw_video').load("views/vw_video.html").remove();
     $('.vw_testimonio').load("views/vw_testimonio.html").remove();
     $('.vw_encuesta').load("views/vw_encuesta.html").remove();
     $('.vw_listPrecio').load("views/vw_listPrecio.html").remove();
+    
     
     
     
