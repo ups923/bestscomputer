@@ -6,29 +6,36 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
-    <meta name="author" content="Angel Lugo | Bests Computer">
+    <meta name="author" content="Angel Lugo | Best Computers">
     <meta name="robots" content="index, follow"/>
     
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="Best Computer online" /> <!-- website name -->
+	<meta property="og:site_name" content="Best Computers online" /> <!-- website name -->
 	<meta property="og:site" content="Website" /> <!-- website link -->
-	<meta property="og:title" content="Bests Computer"/> <!-- title shown in the actual shared post -->
+	<meta property="og:title" content="Best Computers"/> <!-- title shown in the actual shared post -->
 	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
 	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
 	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
 <!--	<meta property="og:type" content="article" />-->
 
     <!-- Website Title -->
-    <title>Bests Computer</title>
+    <title>Best Computers</title>
     
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/fontawesome-all.css" rel="stylesheet">
-    <link href="assets/css/swiper.css" rel="stylesheet">
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/fontawesome-all.css" rel="stylesheet">
+        <link href="assets/css/swiper.css" rel="stylesheet">
 	<link href="assets/css/magnific-popup.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
-	
+	<link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+        <style>
+            .WAButton{
+                z-index: 900;
+                
+            }
+        </style>
+
 	<!-- Favicon  -->
     <link rel="icon" href="assets/images/favicond.svg">
 </head>
@@ -44,6 +51,8 @@
     </div>
     <!-- end of preloader -->
     
+    <!--Div WhatsApp-->
+    <div id="WAButton" style="z-index: 900;"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -171,68 +180,7 @@
 
 
     <!-- Services -->
-    <div id="services" class="cards-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Servicios y soluciones empresariales</h2>
-                    <p class="p-heading p-large">Servimos a las pequeñas y medianas empresas en todas las industrias relacionadas con tecnología y seguridad informática que se presentan a continuación.</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card -->
-                    <div class="card">
-<!--                        <img class="card-image" src="assets/images/services-icon-1.svg" alt="alternative">-->
-                        <img class="card-image" src="assets/images/bios_01.png" alt="alternative" style="width: 100%; height: auto;">
-                        <div class="card-body">
-                            <h4 class="card-title">Computadores y Laptop's</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Reparación y ensamblaje</li>
-                                    <li class="list-group-item">Reparación de monitores</li>
-                                    <li class="list-group-item">Venta de Software</li>
-                                </ul>
-                            
-                            <p style="padding-top: 20px; padding-bottom: 0px;">Soluciones rápidas a computadoras lentas</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="card-image" src="assets/images/img_001.jpg" alt="alternative" style="width: 100%; height: auto;">
-                        <div class="card-body">
-                            <h4 class="card-title">Ingeniería y diseño de redes</h4>
-                            <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Internet banda ancha</li>
-                                    <li class="list-group-item">Integración con dispositivos en la red </li>
-                                </ul>
-                            <p style="padding-top: 10px; padding-bottom: 15px;">Toda implantación de redes inicia por un proyecto bien definido</p>
-                            
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-<!--                        <img class="card-image" src="assets/images/services-icon-3.svg" alt="alternative">-->
-                        <img class="card-image" src="assets/images/seguridad_01.jpg" alt="alternative" style="width: 100%; height: auto;" >
-                        <div class="card-body">
-                            <h4 class="card-title">Seguridad Electrónica</h4>
-                            <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Videovigilancia <b>(CCTV)</b> <br/>Monitoreo remoto</li>
-                                    <li class="list-group-item">Alarmas de seguridad <br/><b>(Cableadas/Inalambricas)</b></li>
-                            </ul>
-                            <p style="padding-top: 15px; padding-bottom: 29px;">Seguridad y bienestar que pueden ser integrados a través de redes interiores y exteriores.</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
+        <div class="vw_servicios"></div>
     <!-- end of services -->
 
 
@@ -242,9 +190,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h2>Potentes herramientas y software de gestion</h2>
+                        <h2>Potentes herramientas y software de gestión</h2>
                         <p>Diseñe y planifique los pasos de crecimiento de su negocio con poderosas herramientas y desarrolla tu negocio al maximo manteniendo control absoluto sobre lo que sucede dentro del mismo</p>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">+ INFO</a>
+<!--                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">+ INFO</a>-->
+                        
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -292,7 +241,8 @@
                                 <div class="media-body">PlayStation, xBOX, WII, Nintendo</div>
                             </li>
                         </ul>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">+Info</a>
+<!--                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">+Info</a>-->
+                        
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -428,6 +378,6 @@
     <script src="assets/js/validator.min.js"></script> 
     <script src="assets/js/myJS.js?v=123"></script> 
     <script src="assets/js/scripts.js"></script>
-    
+    <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 </body>
 </html>
