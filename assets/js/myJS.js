@@ -1,6 +1,8 @@
 // Declarando ----- Deja de ver mi codigo pedazo de sapo //
 API = 'https://grado100mil.000webhostapp.com/vendor/mails/API.php';
+path_vw = 'views/';
 // ===============================================================
+
 
 /* ========= TROZO CODIGO ===============*/
 $(document).ready(function() { 
@@ -10,14 +12,29 @@ $(document).ready(function() {
     });
 }); 
 
+/* ========= CATALOGO ===============*/
+$(document).ready(function() { 
+    $('body').on('click', '.vw_catalogo', function(event) {
+        event.preventDefault();
+        $.post(tpl('vw_catalogo'), function (data) {
+            $("#resp").html(data);
+        }).done(function () {
+            //console.log("Done OK");
+        }).fail(function () {
+            alert("No ha sido posible comunicar con el servidor");
+        })
+    });
+}); 
+
 /* ========= onLOAD ===============*/
 $(document).ready(function() {
-    $('.vw_api_ws').load("views/vw_api_ws.html");
-    $('.vw_header').load("views/vw_header.html");
-    $('.vw_pre_footer').load("views/vw_pre_footer.html");
-    $('.vw_footer').load("views/vw_footer.html");
-    $('.vw_contacto').load("views/vw_contacto.html");
-    $('.vw_servicios').load("views/vw_servicios.html");
+    $('.vw_api_ws').load(tpl('vw_api_ws'));
+    $('.vw_header').load(tpl('vw_header'));
+    $('.vw_pre_footer').load(tpl('vw_pre_footer'));
+    $('.vw_footer').load(tpl('vw_footer'));
+    $('.vw_contacto').load(tpl('vw_contacto'));
+    $('.vw_servicios').load(tpl('vw_servicios'));
+    
     $('.vw_about').load("views/vw_about_team.html").remove();
     $('.vw_video').load("views/vw_video.html").remove();
     $('.vw_testimonio').load("views/vw_testimonio.html").remove();
@@ -42,9 +59,7 @@ $(function() {
 $(document).ready(function () {
     $('body').on('click', '#enviar_email', function () {
         $(this.id).prop('disabled',true);
-        
         nombre = $('#cname').val(); email = $('#cemail').val(); msg = $('#cmessage').val();
-
         ////$("#contactForm").validate();
         $("#contactForm").validate({
             event: "blur", rules: {'cname': "required", 'cemail': "required email", 'cmessage': "required"},
@@ -91,3 +106,6 @@ $(document).ready(function () {
     });
 }); 
 
+function tpl(data, ext = 'html'){
+    return path_vw+data+"."+ext;
+}

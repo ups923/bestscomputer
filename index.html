@@ -18,7 +18,8 @@
 
     <!-- Website Title -->
     <title>Best Computers</title>
-    
+    <!-- Favicon  -->
+    <link rel="icon" href="assets/images/favicond.svg">
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
         <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -27,6 +28,8 @@
 	<link href="assets/css/magnific-popup.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+        <link rel="stylesheet" href="assets/css/iziModal.css">
+        
         <style>
             .WAButton{
                 z-index: 900;
@@ -34,11 +37,14 @@
             }
         </style>
 
-	<!-- Favicon  -->
-    <link rel="icon" href="assets/images/favicond.svg">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+    
+    
+<!--    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
+<div hidden id="resp" class="resp"></div> <!--respuestas ajax-->
+
     
     <!-- Preloader -->
     <div class="spinner-wrapper">
@@ -97,6 +103,9 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">Contacto</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link vw_catalogo"  href="#catalogo">Catálogo</a>
+                </li>
             </ul>
             <span class="nav-item social-icons">
                 <span class="fa-stack">
@@ -122,6 +131,7 @@
 
     <!-- Header -->
         <header id="header" class="header vw_header"></header> <!-- end of header -->
+        
     <!-- end of header -->
 
 
@@ -373,6 +383,7 @@
     <script src="assets/js/popper.min.js"></script> 
     <script src="assets/js/bootstrap.min.js"></script> 
     <script src="assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/iziModal.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
     <script src="assets/js/validator.min.js"></script> 

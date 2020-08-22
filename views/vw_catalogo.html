@@ -1,0 +1,51 @@
+<style>
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  /*overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+</style>
+<!--iziMODAL-->
+<a class="waves-effect waves-light btn-large red darken-2 trigger">Modal</a>
+<div id="modal-modifications"> 
+
+    
+    
+<br/>
+</div> <!-- modal modification-->
+
+<script>
+    /* inicializar iziModal */
+    $(document).on('click', '.trigger', function (event) {
+    event.preventDefault();
+        $('#modal-modifications').iziModal('open');
+    });
+
+    $("#modal-modifications").iziModal({
+        iframe: true,
+        iframeHeight: 800,
+        iframeURL: 'https://gumroad.com/bestcomputers',
+        
+        title: 'Catálogo Web ',
+        overlayClose: false,
+        width: "80%",
+        autoOpen: true,
+        overlayColor: 'rgba(0, 0, 0, 0.6)',
+        fullscreen: true, //icon
+        openFullscreen: true,
+        restoreDefaultContent: false,
+        zindex: 99999,
+        /* Activar y desactivar el scroll segun abre o cierra el iframe */
+        onClosed: function(){
+            $('body').css('overflow-y','visible');
+        },
+        afterRender: function(){
+            $('body').css('overflow-y','hidden');
+            $('div.profile-picture-small').remove();
+        }
+    });
+
+
+    
+
+
+</script>  
