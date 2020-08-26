@@ -12,6 +12,7 @@ $(document).ready(function() {
     });
 }); 
 
+
 /* ========= CATALOGO ===============*/
 $(document).ready(function() { 
     $('body').on('click', '.vw_catalogo', function(event) {
@@ -26,6 +27,13 @@ $(document).ready(function() {
     });
 }); 
 
+
+$(document).ready(function() {
+    $('.i_want_this_button').html('Lo quiero');
+
+}); 
+
+
 /* ========= onLOAD ===============*/
 $(document).ready(function() {
     $('.vw_api_ws').load(tpl('vw_api_ws'));
@@ -34,9 +42,10 @@ $(document).ready(function() {
     $('.vw_footer').load(tpl('vw_footer'));
     $('.vw_contacto').load(tpl('vw_contacto'));
     $('.vw_servicios').load(tpl('vw_servicios'));
+    $('.vw_shop').load(tpl('vw_shop'));
     
     $('.vw_about').load("views/vw_about_team.html").remove();
-    $('.vw_video').load("views/vw_video.html").remove();
+        $('.vw_video').load("views/vw_video.html").remove();
     $('.vw_testimonio').load("views/vw_testimonio.html").remove();
     $('.vw_encuesta').load("views/vw_encuesta.html").remove();
     $('.vw_listPrecio').load("views/vw_listPrecio.html").remove();
